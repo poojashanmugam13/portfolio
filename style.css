@@ -1,0 +1,765 @@
+/*
+ * Custom Variables for Light and Dark Themes
+ *
+ * This section defines design tokens that control the look and feel of the application.
+ * Variables are grouped by category (colors, spacing, typography, etc.) for clarity and maintainability.
+ *
+ * Naming Convention (aligned with usage):
+ * - Colors: `color-` prefix (e.g., --color-primary)
+ * - Spacing/Sizes: `sz-` prefix (e.g., --sz-spacing-md)
+ * - Typography: `fnt-` prefix (e.g., --fnt-size-base)
+ * - Shadows: `shadow-` prefix (e.g., --shadow-light)
+ * - Borders/Transitions: `brd-`, `trn-` (e.g., --brd-radius-sm, --trn-duration-normal)
+ */
+
+:root {
+  /* --- Light Theme Defaults (Purple Dominant) --- */
+
+  /* == Colors == */
+
+  /* Brand / Primary Palette */
+  --color-primary: #8A2BE2;
+  /* Blue Violet - Main brand color, used for primary actions, buttons */
+  --color-primary-light: #9fefec;
+  /* Lighter Purple - Used for subtle accents, hover states, secondary elements */
+  --color-secondary: #000000;
+  /* Black - Often used for headings, strong text, or specific UI elements */
+  --color-accent: #7300ff;
+  /* Gold - Vibrant accent for call-to-actions, highlights, notifications */
+  --color-success: #28A745;
+  /* Green - For success messages, positive indicators */
+  --color-warning: #FFC107;
+  /* Yellow - For warning messages, attention required */
+  --color-error: #DC3545;
+  /* Red - For error messages, destructive actions */
+
+  /* Text Colors */
+  --color-text: #212529;
+  /* Dark Gray - Default body text color */
+  --color-text-light: #6C757D;
+  /* Lighter Gray - For secondary text, captions, less important info */
+  --color-text-dark: #FFFFFF;
+  /* White - Text color that sits on primary background */
+  --color-text-on-accent: #212529;
+  /* Dark Gray - Text color that sits on accent background */
+
+  /* Background Colors */
+  --color-bg: #F5EEFF;
+  /* Lavender Blush - Main application background */
+  --color-bg-alt: #EDE7F6;
+  /* Slightly darker soft purple - For alternate sections (e.g., striped lists, distinct content blocks) */
+  --color-card-bg: #FFFFFF;
+  /* White - Background for cards, modals, dropdowns */
+  --color-header-bg: rgba(245, 238, 255, 0.95);
+  /* Semi-transparent header matching page background */
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black for modal overlays */
+
+  /* Border & Outline Colors */
+  --color-border: #C3B1E1;
+  /* Muted purple - For borders, dividers, input fields */
+  --color-outline-focus: #B09FEF;
+  /* Focus outline color, often a lighter primary */
+
+  /* Functional / Interactive Colors */
+  --color-link-blue: #007bff;
+  /* Standard blue - Default link color */
+  --color-link-blue-hover: #0056b3;
+  /* Darker blue - Link hover state */
+  --color-particle: rgba(138, 43, 226, 0.1);
+  /* Subtle purple - For background particles or subtle visual effects */
+
+  /* Shadows */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+
+
+  /* == Spacing & Sizing (Examples, you might add more) == */
+  --sz-spacing-xs: 0.25rem;
+  /* 4px */
+  --sz-spacing-sm: 0.5rem;
+  /* 8px */
+  --sz-spacing-md: 1rem;
+  /* 16px - Base spacing unit */
+  --sz-spacing-lg: 1.5rem;
+  /* 24px */
+  --sz-spacing-xl: 2rem;
+  /* 32px */
+
+  --sz-container-max-width: 1200px;
+  /* Max width for main content containers */
+
+  /* == Typography (Examples, you might add more) == */
+  --fnt-family-base: 'Poppins', sans-serif;
+  /* Primary font family, changed to Poppins */
+  --fnt-family-heading: 'Poppins', sans-serif;
+  /* Headings also use Poppins */
+
+  --fnt-size-base: 1rem;
+  /* 16px - Default font size for body text */
+  --fnt-size-sm: 0.875rem;
+  /* 14px - Smaller text, captions */
+  --fnt-size-lg: 1.25rem;
+  /* 20px - Larger text */
+
+  --fnt-size-h1: 2.5rem;
+  /* 40px */
+  --fnt-size-h2: 2rem;
+  /* 32px */
+  --fnt-size-h3: 1.75rem;
+  /* 28px */
+  --fnt-size-h4: 1.5rem;
+  /* 24px */
+  --fnt-size-h5: 1.25rem;
+  /* 20px */
+  --fnt-size-h6: 1rem;
+  /* 16px */
+
+  --fnt-weight-light: 300;
+  --fnt-weight-normal: 400;
+  --fnt-weight-medium: 500;
+  --fnt-weight-semibold: 600;
+  --fnt-weight-bold: 700;
+
+  --fnt-line-height-base: 1.6;
+  --fnt-line-height-heading: 1.2;
+
+
+  /* == Borders & Shadows (Examples, you might add more) == */
+  --brd-radius-sm: 4px;
+  /* Small border radius for buttons, inputs */
+  --brd-radius-md: 8px;
+  /* Medium border radius for cards, containers */
+  --brd-thickness-base: 1px;
+  --brd-style-base: solid;
+
+
+  /* == Transitions (Examples, you might add more) == */
+  --trn-duration-fast: 0.15s;
+  --trn-duration-normal: 0.3s;
+  --trn-ease: ease-in-out;
+}
+
+/*
+ * Dark Theme Overrides
+ * These variables will override the light theme defaults when `data-theme="dark-theme"` is applied
+ * to the `<html>` or `<body>` element.
+ */
+[data-theme="dark-theme"] {
+  /* == Colors == */
+
+  /* Brand / Primary Palette */
+  --color-primary: #FFD700;
+  /* Gold - Main brand color for dark theme (vibrant yellow) */
+  --color-primary-light: #FFFACD;
+  /* Lemon Chiffon - Lighter yellow for subtle accents */
+  --color-secondary: #FFFFFF;
+  /* White - Often used for headings, strong text, or specific UI elements */
+  --color-accent: #7300ff;
+  /* Vibrant accent for call-to-actions, highlights, notifications (kept from light theme) */
+  --color-success: #32CD32;
+  /* Lime Green - For success messages, brighter for dark theme */
+  --color-warning: #FFA500;
+  /* Orange - For warning messages, attention required, good contrast on black/yellow */
+  --color-error: #DC143C;
+  /* Crimson - For error messages, destructive actions */
+
+  /* Text Colors */
+  --color-text: #F8F8F8;
+  /* Near White - Default body text color */
+  --color-text-light: #CCCCCC;
+  /* Light Gray - For secondary text, captions, less important info */
+  --color-text-dark: #1A1A1A;
+  /* Very Dark Gray - Text color that sits on primary (yellow) or accent (white) backgrounds */
+  --color-text-on-accent: #1A1A1A;
+  /* Very Dark Gray - Text color that sits on accent (white) background */
+
+  /* Background Colors */
+  --color-bg: #000000;
+  /* Black - Main application background */
+  --color-bg-alt: #1A1A1A;
+  /* Very Dark Gray - For alternate sections (e.g., striped lists, distinct content blocks) */
+  --color-card-bg: #282828;
+  /* Dark Gray - Background for cards, modals, dropdowns */
+  --color-header-bg: rgba(0, 0, 0, 0.95);
+  /* Semi-transparent header matching dark bg */
+  --color-overlay: rgba(0, 0, 0, 0.8);
+  /* Darker Semi-transparent black for modal overlays */
+
+  /* Border & Outline Colors */
+  --color-border: #444444;
+  /* Dark Gray - For borders, dividers, input fields */
+  --color-outline-focus: #FFD700;
+  /* Gold - Focus outline color, matching primary */
+
+  /* Functional / Interactive Colors */
+  --color-link-blue: #87CEFA;
+  /* Light Sky Blue - Lighter blue for links on dark background */
+  --color-link-blue-hover: #5F9EA0;
+  /* Cadet Blue - Darker blue for link hover */
+  --color-particle: rgba(255, 215, 0, 0.15);
+  /* Subtle Gold particles */
+
+  /* Shadows */
+  --shadow-light: rgba(255, 255, 255, 0.1);
+  /* Lighter shadows, more visible on dark backgrounds */
+  --shadow-medium: rgba(255, 255, 255, 0.2);
+  /* Medium shadows */
+
+  /*
+   * Non-color variables usually don't need to change between themes
+   * unless you want specific spacing or shadows to look different in dark mode.
+   * If they do, define them here. Example:
+   * --shd-box-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+   */
+}
+
+/*
+ * Global CSS Resets and Base Styles
+ * Apply these after your variable definitions so they can use the variables.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* Include padding and border in element's total width and height */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fnt-family-base);
+  font-size: var(--fnt-size-base);
+  line-height: var(--fnt-line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition:
+    background-color var(--trn-duration-normal) var(--trn-ease),
+    color var(--trn-duration-normal) var(--trn-ease);
+  /* Smooth theme transition */
+}
+
+a {
+  color: var(--color-link-blue);
+  text-decoration: none;
+  transition: color var(--trn-duration-fast) var(--trn-ease);
+}
+
+a:hover {
+  color: var(--color-link-blue-hover);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fnt-family-heading);
+  /* Headings also use the base font */
+  line-height: var(--fnt-line-height-heading);
+  margin-bottom: var(--sz-spacing-md);
+  color: var(--color-text);
+  /* Headings use a slightly different color or the text color */
+}
+
+h1 {
+  font-size: var(--fnt-size-h1);
+}
+
+h2 {
+  font-size: var(--fnt-size-h2);
+}
+
+h3 {
+  font-size: var(--fnt-size-h3);
+}
+
+h4 {
+  font-size: var(--fnt-size-h4);
+}
+
+h5 {
+  font-size: var(--fnt-size-h5);
+}
+
+h6 {
+  font-size: var(--fnt-size-h6);
+}
+
+p {
+  margin-bottom: var(--sz-spacing-md);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Gradient text */
+.gradient-text {
+  color: var(--color-primary);
+  /* Changed to single color */
+  /* Removed: background, -webkit-background-clip, background-clip, color: transparent */
+  display: inline-block;
+}
+
+/* Subtle shadow effect */
+.subtle-shadow {
+  box-shadow: 0 4px 12px var(--shadow-light);
+  transition: box-shadow 0.3s ease;
+  border: 1px solid var(--color-border);
+  /* Add a subtle border */
+}
+
+.subtle-shadow:hover {
+  box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating-icon {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse animation for buttons (subtle) */
+.pulse:hover {
+  animation: pulse 1.5s infinite;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: var(--color-card-bg);
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -5px var(--shadow-medium), 0 5px 5px -2px var(--shadow-light);
+}
+
+/* Section entry animation */
+.section-entry {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.section-entry.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gradient border */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Particle background */
+/* Particles.js background */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Ensures it stays behind content */
+  background-color: transparent; /* Allows main body background to show if needed */
+}
+
+/* Decoration Circles (if you want these as part of the background) */
+.decoration-circle {
+  filter: blur(80px); /* Soft blur effect */
+  opacity: 0.6; /* Subtle visibility */
+  animation: pulse-fade 8s infinite alternate; /* Custom animation */
+}
+
+@keyframes pulse-fade {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* Add particle color variables to your theme roots (if not already there) */
+:root {
+  --color-particle: rgba(138, 43, 226, 0.1); /* Subtle purple for light theme */
+}
+
+[data-theme="dark-theme"] {
+  --color-particle: rgba(255, 215, 0, 0.15); /* Subtle Gold particles for dark theme */
+}
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.1;
+}
+
+.particle {
+  position: absolute;
+  background: var(--color-particle);
+  border-radius: 50%;
+}
+
+/* Custom modal animation */
+@keyframes modalEntry {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Ripple effect for buttons */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: ripple 0.5s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* Custom shape divider */
+.custom-shape-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.custom-shape-divider .shape-fill {
+  fill: var(--color-bg);
+  /* Match footer shape to body background */
+  transition: fill 0.3s ease;
+}
+
+/* Floating circles decoration */
+.decoration-circle {
+  opacity: 0.05;
+  filter: blur(10px);
+}
+
+/* Styles for "View Certificate" links */
+.view-certificate-btn,
+.view-achievement-cert-btn {
+  color: var(--color-link-blue) !important;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0;
+}
+
+.view-certificate-btn:hover,
+.view-achievement-cert-btn:hover {
+  text-decoration: underline;
+  color: var(--color-link-blue-hover) !important;
+}
+/* Custom rule to make 'View Certificates' buttons always blue */
+.view-cert-btn { /* Replace .view-cert-btn with the actual class of your certificate buttons */
+  background-color: #007bff !important; /* A standard blue */
+  color: #FFFFFF !important; /* White text for contrast */
+  border-color: #007bff !important; /* Ensure border is also blue if present */
+}
+
+/* If your certificates are links, ensure their text color is also blue */
+.view-cert-btn a { /* If the button is an 'a' tag or contains an 'a' tag */
+  color: #007bff !important;
+}
+/* Soft Skills proficiency bars */
+.skill-bar-fill {
+  background-color: var(--color-primary);
+  transition: width 0.5s ease-out;
+}
+
+.skill-bar-track {
+  background-color: var(--color-border);
+}
+
+/* My Journey separating line */
+.journey-line {
+  background-color: #A0AEC0;
+  /* Visible gray in light theme */
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark-theme"] .journey-line {
+  /* Updated selector */
+  background-color: #666666;
+  /* Darker gray in dark theme, blends with black background */
+}
+
+/* New/Enhanced Hover Effects for Buttons */
+
+/* Highlight for "Contact Me" button */
+.button-contact-me {
+  transition: all 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.button-contact-me:hover {
+  background-color: var(--color-secondary); /* Fill with secondary color on hover */
+  color: var(--color-text-dark); /* Change text to dark color on hover */
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 15px var(--shadow-medium);
+}
+
+/* Base style for Download Resume button */
+.button-download-resume {
+  background-color: var(--color-secondary); /* Black in light theme, White in dark theme */
+  color: var(--color-text-dark); /* White text in light theme, Black text in dark theme */
+  border: 2px solid var(--color-secondary); /* Match border to background initially */
+  transition: all 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Highlight for "Download Resume" (bordered button) */
+.button-download-resume:hover {
+  background-color: var(--color-secondary); /* Fill with secondary color on hover */
+  color: var(--color-text-dark); /* Change text to dark color on hover */
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 15px var(--shadow-medium);
+}
+
+/* Base style for View Projects button */
+.button-view-projects {
+  border-color: var(--color-primary); /* Ensures border matches theme primary color */
+  color: var(--color-text); /* Use default text color for consistency with other text */
+  background-color: transparent; /* Ensure it's transparent initially */
+  transition: all 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+/* Highlight for "View Projects" (bordered button) */
+.button-view-projects:hover {
+  background-color: var(--color-primary); /* Fill with primary color on hover */
+  color: var(--color-text-dark); /* Change text to dark color on hover */
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 15px var(--shadow-medium);
+}
+
+
+/* More specific for View Project Details button (in card) */
+.button-project-details {
+  transition: all 0.3s ease-in-out;
+}
+
+.button-project-details:hover {
+  background-color: var(--color-accent);
+  /* Make background change more obvious */
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 8px var(--shadow-medium);
+  /* Changed fixed rgba to var */
+}
+
+/*
+* Nav Link Highlighting (Updated for active state)
+*/
+.nav-link,
+#mobileMenu a {
+  /* Apply consistent padding to all nav links */
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  /* Use flex to align icon/text if needed, and ensure consistent height */
+  align-items: center;
+  border-radius: 9999px;
+  /* Rounded corners always */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Only these properties will transition */
+}
+
+.nav-link.active,
+#mobileMenu a.active {
+  color: var(--color-text-dark) !important;
+  /* Text color for active link */
+  background-color: var(--color-primary);
+  /* Background highlight */
+  font-weight: var(--fnt-weight-semibold);
+  /* Make it bold */
+}
+
+/* Ensure the underline for active state is consistent for desktop */
+.nav-link.active span {
+  width: 100%;
+  background-color: var(--color-text-dark);
+  /* Underline color for active state */
+}
+
+/* Remove default hover for active link to avoid conflict */
+.nav-link.active:hover {
+  color: var(--color-text-dark) !important;
+  /* Keep active text color on hover */
+  text-decoration: none;
+  /* No underline on hover for active link */
+}
+
+/* Remove underline on hover for non-active nav links (from previous task) */
+.nav-link span {
+  width: 0;
+  /* Default width for underline is 0 */
+  transition: width 0.3s ease;
+  /* Transition for width */
+  background-color: var(--color-primary);
+  /* Color of the underline */
+}
+
+.nav-link:hover span {
+  width: 0;
+  /* Ensure no underline on hover */
+}
+
+
+/*
+* Modal Styles
+*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-overlay);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background-color: var(--color-card-bg);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  /* Tailwind rounded-xl */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  position: relative;
+  max-width: 800px;
+  /* Adjust as needed */
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.95) translateY(10px);
+  /* Initial state for animation */
+  animation: modalEntry 0.3s ease-out forwards;
+  border: 1px solid var(--color-border);
+  /* Subtle border for modal */
+}
+
+/* Ensure modal text is black in dark theme */
+[data-theme="dark-theme"] .modal-content #modalBody {
+  color: var(--color-text-dark);
+  /* This will be black in dark theme based on the existing variable definition */
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: var(--color-text);
+}
+/* Ensure span text is visible in light theme */
+html[data-theme="light-theme"] .bg-color-primary.text-color-text {
+  color: var(--color-secondary); /* Use black text on the primary (purple) background */
+}

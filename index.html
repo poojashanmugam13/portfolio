@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pooja Shanmugam | Electrical Engineer Portfolio</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body class="min-h-screen">
+  <div class="particles" id="particles-js"></div>
+  
+  <div class="fixed -left-10 -top-10 w-48 h-48 rounded-full bg-yellow-200 decoration-circle z-0 dark:bg-yellow-800"></div>
+  <div class="fixed -right-10 bottom-1/4 w-72 h-72 rounded-full bg-black decoration-circle z-0 dark:bg-gray-700"></div>
+  
+  <header class="bg-header-bg backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-color-border">
+    <div class="container mx-auto flex justify-between items-center p-4 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-color-primary to-color-secondary cursor-pointer flex items-center">
+        <span class="floating-icon mr-2 text-color-primary" style="font-size: 2rem;"><i class="fas fa-cube"></i></span> 
+        <span>Pooja Shanmugam</span>
+      </h1>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#about" class="nav-link relative group text-color-text hover:text-color-primary transition-colors font-medium">
+  About
+  <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-color-primary transition-all duration-300"></span>
+</a>
+<a href="#skills" class="nav-link relative group text-color-text hover:text-color-primary transition-colors font-medium">
+  Skills
+  <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-color-primary transition-all duration-300"></span>
+</a>
+<a href="#projects" class="nav-link relative group text-color-text hover:text-color-primary transition-colors font-medium">
+  Projects
+  <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-color-primary transition-all duration-300"></span>
+</a>
+<a href="#experience" class="nav-link relative group text-color-text hover:text-color-primary transition-colors font-medium">
+  Experience
+  <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-color-primary transition-all duration-300"></span>
+</a>
+<a href="#achievements" class="nav-link relative group text-color-text hover:text-color-primary transition-colors font-medium">
+  Achievements
+  <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-color-primary transition-all duration-300"></span>
+</a>
+<a href="#contact" class="nav-link relative group text-color-text hover:text-color-primary transition-colors font-medium">
+  Contact
+  <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-color-primary transition-all duration-300"></span>
+</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <button id="themeToggleBtn" class="p-2 rounded-full text-color-primary hover:bg-color-bg-alt transition-colors ripple" aria-label="Toggle dark/light theme">
+          <i class="fas fa-moon text-lg" id="themeIcon"></i>
+        </button>
+        <button id="menuBtn" class="md:hidden focus:outline-none ripple" aria-label="Toggle menu">
+          <svg class="w-6 h-6 text-color-primary" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <div id="mobileMenu" class="hidden md:hidden bg-header-bg backdrop-blur-sm shadow-lg border-t border-color-border">
+      <nav class="flex flex-col space-y-4 p-6">
+        <a href="#about" class="text-color-text hover:text-color-primary transition-colors font-medium flex items-center">
+          <i class="fas fa-user mr-3 text-color-primary w-5"></i> About
+        </a>
+        <a href="#skills" class="text-color-text hover:text-color-primary transition-colors font-medium flex items-center">
+          <i class="fas fa-code mr-3 text-color-primary w-5"></i> Skills
+        </a>
+        <a href="#projects" class="text-color-text hover:text-color-primary transition-colors font-medium flex items-center">
+          <i class="fas fa-project-diagram mr-3 text-color-primary w-5"></i> Projects
+        </a>
+        <a href="#experience" class="text-color-text hover:text-color-primary transition-colors font-medium flex items-center">
+          <i class="fas fa-briefcase mr-3 text-color-primary w-5"></i> Experience
+        </a>
+        <a href="#contact" class="text-color-text hover:text-color-primary transition-colors font-medium flex items-center">
+          <i class="fas fa-envelope mr-3 text-color-primary w-5"></i> Contact
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 lg:px-8 py-12 relative z-10">
+    <section id="about" class="min-h-[80vh] flex items-center justify-center py-16 section-entry">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="text-center lg:text-left">
+          <h2 class="text-4xl md:text-6xl font-bold mb-6 text-color-text">
+            Hi, I'm <span class="gradient-text">Pooja Shanmugam</span>
+          </h2>
+          <p class="text-xl md:text-2xl text-color-text-light mb-8">
+            A Passionate Electrical Engineering Student, Innovator and Web developer
+          </p>
+          <p class="text-lg text-color-text mb-8 max-w-2xl">
+            I am a highly motivated final-year Electrical and Electronics Engineering student at Kongunadu College of Technology, graduating in 2026. My journey has equipped me with a strong foundation in electrical systems, control engineering, and the burgeoning fields of IoT and automation. I am passionate about leveraging technology to develop sustainable and intelligent solutions that address real-world challenges. My approach combines rigorous analytical thinking with hands-on experimentation, allowing me to bridge theoretical knowledge with practical application. I am constantly exploring new technologies and am eager to contribute to innovative projects in smart grids, renewable energy, and industrial automation.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-color-primary to-color-accent text-color-text-dark rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ripple button-contact-me">
+              Contact Me
+            </a>
+            <a href="#projects" class="px-8 py-3 border-2 border-color-primary text-color-primary rounded-full font-medium hover:bg-color-primary hover:text-color-text transition-all duration-300 hover:scale-105 ripple button-view-projects">
+              View Projects
+            </a>
+            <a href="https://drive.google.com/file/d/1NwwelRHOLbk-axgBdalKKEBH2fqqpMHt/view?usp=drive_link" target="_blank" class="px-8 py-3 border-2 border-color-secondary text-color-text rounded-full font-medium transition-all duration-300 hover:scale-105 ripple button-download-resume">
+              Download Resume <i class="fas fa-download ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="relative flex justify-center">
+          <div class="relative gradient-border rounded-full p-1 w-72 h-72 md:w-80 md:h-80 animate__animated animate__pulse animate__slower">
+           <img class="w-full h-full rounded-full object-cover shadow-2xl" src="https://drive.google.com/thumbnail?id=11VRm2vsU9uwkzcMYcKgZl54Y6y2s9SNO&sz=s1000" alt="PoojaShanmugam" />
+          </div>
+          <div class="absolute -bottom-6 -right-6 bg-color-card-bg p-4 rounded-xl shadow-lg border border-color-border animate__animated animate__fadeInUp subtle-shadow">
+            <div class="text-center">
+              <p class="text-sm text-color-text-light">Currently Final year student</p>
+            </div>
+          </div>
+          <div class="absolute -top-10 -left-10 w-48 h-48 md:w-64 md:h-64 z-20">
+            <model-viewer
+              src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+              alt="A 3D model of an astronaut"
+              auto-rotate
+              camera-controls
+              shadow-intensity="1"
+              environment-image="neutral"
+              exposure="1"
+              ar
+              class="w-full h-full"
+            >
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
+            </model-viewer>
+          </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-16 section-entry">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-color-text">
+          My <span class="gradient-text">Skills</span>
+        </h2>
+        <p class="text-lg text-color-text-light max-w-2xl mx-auto">
+          A robust blend of technical expertise and essential soft skills, honed through academic projects and internships.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-color-card-bg rounded-xl shadow-lg overflow-hidden card-hover subtle-shadow">
+          <div class="bg-gradient-to-r from-color-primary to-color-accent p-4">
+            <h3 class="text-xl font-bold text-color-text flex items-center">
+              <i class="fas fa-laptop-code mr-3"></i> Technical Skills
+            </h3>
+          </div>
+          <div class="p-6">
+            <div class="mb-4">
+              <h4 class="font-semibold text-color-text mb-2">Programming Languages</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm dark:bg-yellow-900 dark:text-yellow-200">Java</span>
+                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm dark:bg-yellow-900 dark:text-yellow-200">Python</span>
+                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm dark:bg-yellow-900 dark:text-yellow-200">C/C++</span>
+              </div>
+              <p class="text-sm text-color-text-light mt-2">Proficient in developing algorithms and system logic for various applications, from embedded systems to data analysis.</p>
+            </div>
+            <div class="mb-4">
+              <h4 class="font-semibold text-color-text mb-2">Electrical Engineering Software</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm dark:bg-gray-700 dark:text-gray-200">MATLAB</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm dark:bg-gray-700 dark:text-gray-200">AutoCAD</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm dark:bg-gray-700 dark:text-gray-200">PLC</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm dark:bg-gray-700 dark:text-gray-200">SCADA</span>
+              </div>
+              <p class="text-sm text-color-text-light mt-2">Experienced in designing, simulating, and controlling electrical systems, including industrial automation setups.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-color-text mb-2">Web Development Basics</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm dark:bg-green-900 dark:text-green-200">HTML/CSS</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm dark:bg-green-900 dark:text-green-200">JavaScript</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm dark:bg-green-900 dark:text-green-200">Tailwind CSS</span>
+              </div>
+              <p class="text-sm text-color-text-light mt-2">Capable of building responsive and user-friendly interfaces for web-based applications and dashboards.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-color-card-bg rounded-xl shadow-lg overflow-hidden card-hover subtle-shadow">
+          <div class="bg-gradient-to-r from-color-primary to-color-accent p-4">
+            <h3 class="text-xl font-bold text-color-text flex items-center">
+              <i class="fas fa-tools mr-3"></i> Tools & Technologies
+            </h3>
+          </div>
+          <div class="p-6">
+            <div class="mb-4">
+              <h4 class="font-semibold text-color-text mb-2">IoT & Embedded Systems</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm dark:bg-orange-900 dark:text-orange-200">Arduino</span>
+                <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm dark:bg-orange-900 dark:text-orange-200">Raspberry Pi</span>
+                <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm dark:bg-orange-900 dark:text-orange-200">ESP8266</span>
+              </div>
+              <p class="text-sm text-color-text-light mt-2">Hands-on experience in prototyping and deploying IoT devices for data acquisition and control.</p>
+            </div>
+            <div class="mb-4">
+              <h4 class="font-semibold text-color-text mb-2">Cloud & DevOps Fundamentals</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm dark:bg-red-900 dark:text-red-200">AWS</span>
+                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm dark:bg-red-900 dark:text-red-200">Docker</span>
+              </div>
+              <p class="text-sm text-color-text-light mt-2">Basic understanding of cloud services and containerization for scalable application deployment.</p>
+            </div>
+    
+          </div>
+        </div>
+        
+        <div class="bg-color-card-bg rounded-xl shadow-lg overflow-hidden card-hover subtle-shadow">
+          <div class="bg-gradient-to-r from-color-primary to-color-accent p-4">
+            <h3 class="text-xl font-bold text-color-text flex items-center">
+              <i class="fas fa-brain mr-3"></i> Soft Skills
+            </h3>
+          </div>
+          <div class="p-6">
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-semibold text-color-text mb-1">Communication</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2 skill-bar-track">
+                  <div class="h-2 rounded-full skill-bar-fill" style="width: 90%"></div>
+                </div>
+                <p class="text-sm text-color-text-light mt-1">Effectively convey complex technical concepts to diverse audiences.</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-color-text mb-1">Leadership</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2 skill-bar-track">
+                  <div class="h-2 rounded-full skill-bar-fill" style="width: 85%"></div>
+                </div>
+                <p class="text-sm text-color-text-light mt-1">Ability to guide teams and motivate members towards common goals.</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-color-text mb-1">Problem Solving</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2 skill-bar-track">
+                  <div class="h-2 rounded-full skill-bar-fill" style="width: 95%"></div>
+                </div>
+                <p class="text-sm text-color-text-light mt-1">A knack for identifying challenges and devising effective, innovative solutions.</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-color-text mb-1">Teamwork</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2 skill-bar-track">
+                  <div class="h-2 rounded-full skill-bar-fill" style="width: 88%"></div>
+                </div>
+                <p class="text-sm text-color-text-light mt-1">Collaborate effectively in multidisciplinary teams to achieve project objectives.</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-color-text mb-1">Creativity</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2 skill-bar-track">
+                  <div class="h-2 rounded-full skill-bar-fill" style="width: 92%"></div>
+                </div>
+                <p class="text-sm text-color-text-light mt-1">Innovative thinking to approach problems from unique perspectives and design novel solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-16 section-entry">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-color-text">
+          Featured <span class="gradient-text">Projects</span>
+        </h2>
+        <p class="text-lg text-color-text-light max-w-2xl mx-auto">
+          Showcasing innovative solutions combining electrical engineering principles with software development.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-color-card-bg rounded-xl shadow-lg overflow-hidden card-hover subtle-shadow group">
+          <div class="relative overflow-hidden h-48">
+            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://drive.google.com/thumbnail?id=1OIFr4mvJ3GQKHQ7PfYuOTiSRT71aOYUw&sz=s1000" alt="Project 1" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-6">
+              <h3 class="text-xl font-bold text-white">ECO-FRIENDLY SMART SWITCHBOARD USING BANANA LEAF RESIDUE</h3>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="px-2 py-1 bg-color-primary text-color-text rounded-full text-xs font-semibold">IoT</span>
+                <span class="px-2 py-1 bg-color-primary text-color-text rounded-full text-xs font-semibold">Sustainability</span>
+                <span class="px-2 py-1 bg-color-primary text-color-text rounded-full text-xs font-semibold">Embedded Systems</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-color-text mb-4">
+             This innovative project blends sustainability with smart technology by creating a smart electrical switchboard using banana leaf residue—a biodegradable and abundant agricultural by-product. It aims to reduce the use of non-biodegradable plastic in switchboard manufacturing while integrating smart features for modern homes and eco-conscious users.
+            </p>
+            
+            <div class="flex justify-between items-center">
+              <div class="flex items-center text-sm text-color-text-light">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <span>Jan 2024 - May 2024</span>
+              </div>
+              <button class="view-project-btn px-4 py-2 bg-color-primary text-color-text rounded-lg transition ripple button-project-details" 
+                      data-project="1" 
+                      data-title="ECO-FRIENDLY SMART SWITCHBOARD USING BANANA LEAF RESIDUE" 
+                      data-image-src="https://drive.google.com/thumbnail?id=1OIFr4mvJ3GQKHQ7PfYuOTiSRT71aOYUw&sz=s1000"
+                      data-description="This innovative project developed a sustainable alternative to traditional plastic switchboards. By utilizing processed banana leaf residues as the primary housing material and integrating advanced touch sensor technology, we aimed to significantly reduce plastic waste in electrical installations. The switchboard maintains full functionality, offering a modern, eco-conscious solution for both residential and commercial applications.<br><br>Key components included a custom PCB design, capacitive touch sensors for responsive input, and microcontrollers programmed in C++ to manage power distribution and user interactions. The material research involved testing various compositions of banana leaf residue to ensure durability, fire resistance, and electrical insulation properties. This project showcases a commitment to environmental sustainability within electrical engineering.">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-color-card-bg rounded-xl shadow-lg overflow-hidden card-hover subtle-shadow group">
+          <div class="relative overflow-hidden h-48">
+            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://drive.google.com/thumbnail?id=1OOKjkp9IlrUUVJQlsjLnJMn60LToic90&sz=s1000" alt="AI-Driven Hygiene Solution" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-6">
+              <h3 class="text-xl font-bold text-white">DESIGN AND DEVELOPMENT OF A SENSOR BASED REAL-TIME CLEANING SYSTEM FOR PUBLIC TOILETS</h3>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="px-2 py-1 bg-color-primary text-color-text rounded-full text-xs font-semibold">AI</span>
+                <span class="px-2 py-1 bg-color-primary text-color-text rounded-full text-xs font-semibold">IoT</span>
+                <span class="px-2 py-1 bg-color-primary text-color-text rounded-full text-xs font-semibold">Python</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-color-text mb-4">
+              This smart automated sanitation system was designed to autonomously manage and maintain public toilet cleanliness. By integrating AI-powered computer vision and various IoT sensors, the system monitors real-time conditions, controls odors, and automates cleaning processes, significantly reducing the need for manual intervention and improving public health standards.
+            </p>
+          
+            <div class="flex justify-between items-center">
+              <div class="flex items-center text-sm text-color-text-light">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <span>Mar 2024 - Jun 2024</span>
+              </div>
+              <button class="view-project-btn px-4 py-2 bg-color-primary text-color-text rounded-lg transition ripple button-project-details" 
+                      data-project="2" 
+                      data-title="DESIGN AND DEVELOPMENT OF A SENSOR BASED REAL-TIME CLEANING SYSTEM FOR PUBLIC TOILETS" 
+                      data-image-src="https://drive.google.com/thumbnail?id=1OOKjkp9IlrUUVJQlsjLnJMn60LToic90&sz=s1000"
+                      data-description="This smart automated sanitation system was designed to autonomously manage and maintain public toilet cleanliness. By integrating AI-powered computer vision and various IoT sensors, the system monitors real-time conditions, controls odors, and automates cleaning processes, significantly reducing the need for manual intervention and improving public health standards.<br><br>Technologies used include Raspberry Pi for central processing, ESP32 microcontrollers for sensor integration (motion, air quality, water level), and Python with TensorFlow Lite for on-device AI inference for cleanliness detection. Automated mechanisms for flushing, air freshening, and dispensing disinfectants were also implemented. The project demonstrated a viable path towards smarter, more hygienic urban infrastructure.">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </section>
+
+    <section id="experience" class="py-16 section-entry">
+  <div class="text-center mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-color-text">
+      My <span class="gradient-text">Journey</span>
+    </h2>
+    <p class="text-lg text-color-text-light max-w-2xl mx-auto">
+      Highlighting professional experience, academic milestones, and valuable certifications.
+    </p>
+  </div>
+
+  <div class="max-w-3xl mx-auto">
+    <div class="relative">
+      <div class="absolute left-1/2 w-1.5 h-full journey-line transform -translate-x-1/2 rounded-full"></div>
+
+      <div class="mb-8">
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+          <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right order-1 md:order-none">
+            <div class="bg-color-card-bg p-6 rounded-lg shadow-md subtle-shadow">
+              <h3 class="text-xl font-bold text-color-text">B.E. Electrical and Electronics Engineering</h3>
+              <p class="text-color-primary">Kongunadu College of Technology</p>
+              <p class="text-sm text-color-text-light mb-3">2022 - 2026 (Expected)</p>
+              <p class="text-color-text">Currently pursuing a Bachelor's degree in Electrical and Electronics Engineering, with a strong focus on core electrical subjects like power systems, control systems, and electronics. My coursework also includes emerging areas such as IoT, embedded systems, and renewable energy technologies. I maintain a consistent academic record and actively participate in departmental seminars and workshops to broaden my knowledge.</p>
+            </div>
+          </div>
+          <div class="hidden md:block w-8 flex-shrink-0 relative order-none">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-color-primary rounded-full border-4 border-color-card-bg"></div>
+          </div>
+          <div class="md:w-1/2 md:pl-8">
+            <h3 class="text-xl font-bold text-color-text">Education</h3>
+            <p class="text-color-primary">Bachelor's Degree</p>
+            <p class="text-sm text-color-text-light">2022 - 2026</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+          <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right">
+            <h3 class="text-xl font-bold text-color-text">Internship</h3>
+            <p class="text-color-primary">Practical Experience</p>
+            <p class="text-sm text-color-text-light">Jan 2024</p>
+          </div>
+          <div class="hidden md:block w-8 flex-shrink-0 relative">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-color-primary rounded-full border-4 border-color-card-bg"></div>
+          </div>
+          <div class="md:w-1/2 md:pl-8">
+            <div class="bg-color-card-bg p-6 rounded-lg shadow-md subtle-shadow">
+              <h4 class="font-semibold text-color-text mb-2">Salem Steel Plant - Electrical Maintenance Intern</h4>
+              <p class="text-sm text-color-text-light mb-3">Jan 2024</p>
+              <ul class="list-disc pl-5 space-y-2 text-color-text">
+                <li>Actively participated in the maintenance and optimization of power supply and distribution systems, including high-voltage transformers and switchgear.</li>
+                <li>Gained practical experience with Programmable Logic Controllers (PLC) and Supervisory Control and Data Acquisition (SCADA) systems for process automation.</li>
+                <li>Assisted in troubleshooting electrical faults, performing preventive maintenance on machinery, and ensuring adherence to safety regulations and operational efficiency standards.</li>
+                <li>Collaborated with senior engineers to diagnose equipment malfunctions, contributing to a 15% reduction in downtime for critical production lines during my internship period.</li>
+              </ul>
+              <a href="https://drive.google.com/file/d/1NuoHbOM2MhGV2NJimwvuJpduP3mJuBTB/view?usp=drive_link" target="_blank" class="mt-4 px-4 py-2 rounded-lg transition ripple inline-flex items-center bg-color-primary text-color-text hover:bg-color-accent">
+                View Certificate <i class="fas fa-external-link-alt ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+          <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right order-1 md:order-none">
+            <div class="bg-color-card-bg p-6 rounded-lg shadow-md subtle-shadow">
+              <ul class="space-y-3">
+                <li>
+                  <h4 class="font-semibold text-color-text">AWS Certified Cloud Practitioner</h4>
+                  <p class="text-sm text-color-text-light">Sept 2024</p>
+                  <p class="text-sm text-color-text">Demonstrates a foundational understanding of AWS cloud concepts, services, security, architecture, pricing, and support, crucial for modern IoT and smart grid solutions.</p>
+                  <a href="https://drive.google.com/file/d/1VQQtRmkormWHNJ_rkoSJKAeJj5nVZgUw/view?usp=drive_link"
+                     target="_blank"
+                     class="mt-1 text-sm hover:underline"> View Certificate </a>
+                </li>
+              
+                <li>
+                  <h4 class="font-semibold text-color-text">Introduction to Industry 4.0 and IoT - NPTEL</h4>
+                  <p class="text-sm text-color-text-light">Oct 2024</p>
+                  <p class="text-sm text-color-text">Completed this comprehensive NPTEL course, gaining deep insights into the principles of Industry 4.0, Cyber-Physical Systems, and various IoT protocols and applications, essential for future industrial automation.</p>
+                  <a href="https://docs.google.com/viewer?url=YOUR_NPTEL_PUBLIC_PDF_URL_HERE"
+                     class="mt-1 text-sm hover:underline" target="_blank">
+                     View Certificate
+                  </a>
+                </li>
+                <li>
+                  <h4 class="font-semibold text-color-text">Java Programming Certification</h4>
+                  <p class="text-sm text-color-text-light">Oct 2024</p>
+                  <p class="text-sm text-color-text">Achieved certification in Java programming, validating my ability to develop robust, object-oriented applications. This skill is vital for backend development in IoT platforms and data processing.</p>
+                  <a href="https://docs.google.com/viewer?url=YOUR_JAVA_PUBLIC_PDF_URL_HERE"
+                     class="mt-1 text-sm hover:underline" target="_blank">
+                     View Certificate
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hidden md:block w-8 flex-shrink-0 relative order-none">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-color-primary rounded-full border-4 border-color-card-bg"></div>
+          </div>
+          <div class="md:w-1/2 md:pl-8">
+            <h3 class="text-xl font-bold text-color-text">Certifications</h3>
+            <p class="text-color-primary">Professional Development</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="achievements" class="py-16 bg-color-bg-alt rounded-3xl section-entry">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-color-text">
+          <span class="gradient-text">Achievements</span> & Hackathons
+        </h2>
+        <p class="text-lg text-color-text-light max-w-2xl mx-auto">
+          Recognitions and competitive accomplishments that highlight my problem-solving skills and innovative spirit.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-color-card-bg rounded-xl shadow-lg overflow-hidden card-hover subtle-shadow">
+          <div class="p-6">
+            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4 mx-auto dark:bg-yellow-900">
+              <i class="fas fa-trophy text-3xl text-yellow-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-center text-color-text mb-2">First Prize in Paper Presentation</h3>
+<p class="text-color-text-light text-center mb-4">Won first Prize at Selvam College of Technology, Namakkal.</p>
+<p class="text-sm text-color-text">Awarded for presenting the paper titles as SUSTAINABLE EV BATTERY WASTE MANAGEMENT AND RECYCLING.</p>
+<button class="mt-4 px-4 py-2 rounded-lg transition ripple inline-flex items-center view-achievement-cert-btn"
+        data-achievement="sih"
+        data-title="Smart India Hackathon 2023 Finalist Certificate"
+        data-pdf-src="https://drive.google.com/file/d/146vd3JrZgqruTbFG-GRs7K-rmKN97V39/view?usp=drive_link"> View Certificate <i class="fas fa-external-link-alt ml-2"></i>
+</button>
+</div>
+</div>
+
+<div class="bg-color-card-bg rounded-xl shadow-lg overflow-hidden card-hover subtle-shadow">
+<div class="p-6">
+  <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto dark:bg-blue-900">
+    <i class="fas fa-award text-3xl text-blue-500"></i>
+  </div>
+  <h3 class="text-xl font-bold text-center text-color-text mb-2">VIT HEALTH HACKATHON</h3>
+  <p class="text-color-text-light text-center mb-4">Finalists of Health Hackathon at VIT Bhopal</p>
+  <p class="text-sm text-color-text">Developed a website which can track the nutrition content of any packed items and gives awareness about the intake.</p>
+  <button class="mt-4 px-4 py-2 rounded-lg transition ripple inline-flex items-center view-achievement-cert-btn"
+          data-achievement="VIT HEALTH HACKATHON"
+          data-title="Finalists of Health Hackathon at VIT Bhopal"
+          data-pdf-src="https://drive.google.com/file/d/1OZZY6krU2Wy8EJapTVjGOAFx5qneaEyk/view?usp=sharing"> View Certificate <i class="fas fa-external-link-alt ml-2"></i>
+  </button>
+</div>
+</div>
+
+<div class="bg-color-card-bg rounded-xl shadow-lg overflow-hidden card-hover subtle-shadow">
+<div class="p-6">
+  <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 mx-auto dark:bg-green-900">
+    <i class="fas fa-seedling text-3xl text-green-500"></i>
+  </div>
+  <h3 class="text-xl font-bold text-center text-color-text mb-2">Hack$day Hackathon-Pondicherry</h3>
+  <p class="text-color-text-light text-center mb-4">Finalist - Developed a CAN Bus module based Smart Home Automation</p>
+  <p class="text-sm text-color-text">Participated in 0xday's Hack$day Hackathon at Pondicherry, where my team developed a prototype for a smart home automation. This works on Master Slave Concept where ESP32 as Master and CAN bus module as slave.</p>
+  <button class="mt-4 px-4 py-2 rounded-lg transition ripple inline-flex items-center view-achievement-cert-btn"
+          data-achievement="Hack$day Hackathon-Pondicherry"
+          data-title="Finalist - Developed a CAN Bus module based Smart Home Automation"
+          data-pdf-src="https://drive.google.com/file/d/146vd3JrZgqruTbFG-GRs7K-rmKN97V39/view?usp=drive_link"> View Certificate <i class="fas fa-external-link-alt ml-2"></i>
+  </button>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 section-entry">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-color-text">
+          Get in <span class="gradient-text">Touch</span>
+        </h2>
+        <p class="text-lg text-color-text-light max-w-2xl mx-auto">
+          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        </p>
+      </div>
+      
+      <div class="max-w-3xl mx-auto bg-color-card-bg rounded-xl shadow-lg p-8 md:p-12 subtle-shadow">
+        <form action="https://formspree.io/f/mqazqjzo" method="POST" class="space-y-6">
+          <div>
+            <label for="name" class="block text-color-text text-lg font-medium mb-2">Name</label>
+            <input type="text" id="name" name="name" class="w-full p-3 rounded-md bg-color-bg-alt border border-color-border text-color-text focus:outline-none focus:ring-2 focus:ring-color-primary" placeholder="Your Name" required>
+          </div>
+          <div>
+            <label for="email" class="block text-color-text text-lg font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full p-3 rounded-md bg-color-bg-alt border border-color-border text-color-text focus:outline-none focus:ring-2 focus:ring-color-primary" placeholder="your.email@example.com" required>
+          </div>
+          <div>
+            <label for="message" class="block text-color-text text-lg font-medium mb-2">Message</label>
+            <textarea id="message" name="message" rows="6" class="w-full p-3 rounded-md bg-color-bg-alt border border-color-border text-color-text focus:outline-none focus:ring-2 focus:ring-color-primary" placeholder="Hi Pooja, I'd like to discuss..." required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="px-8 py-3 bg-gradient-to-r from-color-primary to-color-accent text-color-text-dark rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ripple button-send-message">
+              Send Message <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </div>
+        </form>
+        <div class="mt-8 text-center">
+          <p class="text-color-text-light text-lg mb-4">
+            You can also connect with me on:
+          </p>
+          <div class="flex justify-center space-x-6">
+            <a href="https://linkedin.com/in/poojashanmugam13" target="_blank" class="text-color-primary hover:text-color-accent transition-colors text-4xl" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/poojashanmugam13" target="_blank" class="text-color-primary hover:text-color-accent transition-colors text-4xl" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:contact@poojashanmugam.com" class="text-color-primary hover:text-color-accent transition-colors text-4xl" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-color-primary-dark text-color-text-on-primary py-8 text-center relative overflow-hidden">
+    <div class="custom-shape-divider top-0 left-0 right-0 h-24 rotate-180" style="transform: rotate(180deg) translateY(1px);">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,513.53,67.8,596,76.68c74.36,8.85,126.86-13.77,180.45-45.57C868.86,4.19,921.73-11.7,980,18.88c-2.47,15.7-14.72,67.65-38.27,100.41C934.34,136,828.18,172.53,733,184.22c-58.83,7.57-115.15,18.16-173.28,15.22-54.71-2.84-110.15-18.17-168.32-38.61C305.86,134.78,219.7,117.58,159.25,112.18,97.74,107.53,41,97.6,0,80.7Z" class="shape-fill" style="opacity: 0.2;"></path>
+        <path d="M0,0V15.81C13,36.66,62.94,62.59,103.78,76.69,181.1,97.1,293.59,114.3,375.73,114.3c35.61,0,72.43-3.6,120.35-6.73,67.02-4.36,134.35-13.06,201.76-23.4C803.71,67.61,840.45,51.87,880,31.28c81.82-41.97,144.4-86.85,164-106.87,46.54,47.88,89.94,84.92,126.87,101.46,16,6.7,14,24.16,14,24.16V0Z" class="shape-fill" style="opacity: 0.1;"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.82,42.57c-2.8,28.84-25.13,87.35-79.16,128.9-65.73,49.21-140.18,75.83-220.47,95.42C128.53,246.68,57.73,245.54,0,240.23Z" class="shape-fill"></path>
+      </svg>
+    </div>
+    <p>&copy; <span id="currentYear"></span> Pooja Shanmugam. All rights reserved.   </p>
+    
+  </footer>
+
+  <div id="infoModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <button class="modal-close-btn">&times;</button>
+      <h3 id="modalTitle" class="text-2xl font-bold mb-4 text-color-text"></h3>
+      <div id="modalBody" class="text-color-text-light leading-relaxed">
+        </div>
+    </div>
+  </div>
+  <div id="infoModal" class="modal-overlay hidden fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out">
+    <div class="modal-content bg-card-bg p-8 rounded-xl shadow-2xl relative max-w-2xl w-11/12 max-h-[90vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300 ease-in-out">
+        <h3 id="modalTitle" class="text-2xl font-bold mb-4 text-color-primary"></h3>
+        <div id="modalBody" class="text-color-text-light mb-4 text-base leading-relaxed">
+            </div>
+        <button class="modal-close-btn absolute top-4 right-4 text-color-text-light hover:text-color-primary text-2xl" aria-label="Close modal">
+            &times;
+        </button>
+    </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>
