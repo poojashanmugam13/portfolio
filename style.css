@@ -1,3 +1,85 @@
+/* style.css (existing content) */
+
+/* ... (your existing :root and [data-theme="dark-theme"] variables) ... */
+
+/* ... (your existing global resets and base styles) ... */
+
+
+/* === Responsive Adjustments (Start here) === */
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+  :root {
+    --fnt-size-base: 0.95rem; /* Slightly reduce base font size */
+    --fnt-size-h1: 2rem;      /* Adjust H1 size */
+    --fnt-size-h2: 1.75rem;   /* Adjust H2 size */
+    --sz-spacing-md: 0.75rem; /* Reduce default medium spacing */
+    --sz-spacing-lg: 1.25rem; /* Reduce default large spacing */
+  }
+
+  /* Example: Adjust padding for main sections */
+  main section { /* Assuming your main content sections have a 'section' tag or class */
+    padding: var(--sz-spacing-xl) var(--sz-spacing-md); /* More vertical, less horizontal padding */
+  }
+
+  /* Example: Make project cards stack */
+  .projects-grid { /* Assuming you have a grid or flex container for projects */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .card-hover { /* Adjust card width for smaller screens */
+    width: 90%; /* Take up more width */
+    margin-bottom: var(--sz-spacing-lg); /* Add space between stacked cards */
+  }
+
+  /* Hide desktop navigation */
+  .desktop-nav { /* Assuming a class for your desktop navigation */
+    display: none;
+  }
+
+  /* Show mobile menu icon/button */
+  .mobile-menu-toggle { /* Assuming a class for your mobile menu toggle */
+    display: block; /* Make sure it's visible */
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  :root {
+    --fnt-size-base: 0.9rem;  /* Further reduce base font size */
+    --fnt-size-h1: 1.75rem;   /* Further reduce H1 size */
+    --fnt-size-h2: 1.5rem;    /* Further reduce H2 size */
+    --sz-spacing-md: 0.5rem;  /* Further reduce medium spacing */
+  }
+
+  /* Example: Even less padding for very small screens */
+  main section {
+    padding: var(--sz-spacing-xl) var(--sz-spacing-sm);
+  }
+
+  .modal-content {
+    padding: 1rem; /* Reduce modal padding */
+    width: 95%; /* Wider modal on very small screens */
+  }
+
+  /* Adjust header background for mobile */
+  --color-header-bg: rgba(245, 238, 255, 1); /* Make header fully opaque on mobile if it overlays content */
+}
+
+/* Large desktops (if needed, adjust max-width for main container) */
+@media (min-width: 1200px) {
+  .container { /* Assuming a container class for max width */
+    max-width: var(--sz-container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ... (rest of your existing CSS) ... */
+
+
 /*
  * Custom Variables for Light and Dark Themes
  *
