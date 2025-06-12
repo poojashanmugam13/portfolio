@@ -10,48 +10,84 @@
 /* Tablets and smaller devices */
 @media (max-width: 768px) {
   :root {
-    --fnt-size-base: 0.95rem; /* Slightly reduce base font size */
-    --fnt-size-h1: 2rem;      /* Adjust H1 size */
-    --fnt-size-h2: 1.75rem;   /* Adjust H2 size */
-    --sz-spacing-md: 0.75rem; /* Reduce default medium spacing */
-    --sz-spacing-lg: 1.25rem; /* Reduce default large spacing */
+    --fnt-size-base: 0.95rem;
+    /* Slightly reduce base font size */
+    --fnt-size-h1: 2rem;
+    /* Adjust H1 size */
+    --fnt-size-h2: 1.75rem;
+    /* Adjust H2 size */
+    --sz-spacing-md: 0.75rem;
+    /* Reduce default medium spacing */
+    --sz-spacing-lg: 1.25rem;
+    /* Reduce default large spacing */
   }
 
   /* Example: Adjust padding for main sections */
-  main section { /* Assuming your main content sections have a 'section' tag or class */
-    padding: var(--sz-spacing-xl) var(--sz-spacing-md); /* More vertical, less horizontal padding */
+  main section {
+    /* Assuming your main content sections have a 'section' tag or class */
+    padding: var(--sz-spacing-xl) var(--sz-spacing-md);
+    /* More vertical, less horizontal padding */
   }
 
   /* Example: Make project cards stack */
-  .projects-grid { /* Assuming you have a grid or flex container for projects */
+  .projects-grid {
+    /* Assuming you have a grid or flex container for projects */
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
+    /* Stack items vertically */
     align-items: center;
   }
 
-  .card-hover { /* Adjust card width for smaller screens */
-    width: 90%; /* Take up more width */
-    margin-bottom: var(--sz-spacing-lg); /* Add space between stacked cards */
+  .card-hover {
+    /* Adjust card width for smaller screens */
+    width: 90%;
+    /* Take up more width */
+    margin-bottom: var(--sz-spacing-lg);
+    /* Add space between stacked cards */
   }
 
   /* Hide desktop navigation */
-  .desktop-nav { /* Assuming a class for your desktop navigation */
+  .desktop-nav {
+    /* Assuming a class for your desktop navigation */
     display: none;
   }
 
   /* Show mobile menu icon/button */
-  .mobile-menu-toggle { /* Assuming a class for your mobile menu toggle */
-    display: block; /* Make sure it's visible */
+  .mobile-menu-toggle {
+    /* Assuming a class for your mobile menu toggle */
+    display: block;
+    /* Make sure it's visible */
+  }
+
+  /* Ensure achievement and experience sections are visible and stack */
+  .achievements-section,
+  .experience-section {
+    display: block;
+    /* or flex, depending on content layout */
+    width: 100%;
+    padding: var(--sz-spacing-lg) var(--sz-spacing-md);
+    /* Consistent padding */
+  }
+
+  /* Adjustments for content within achievement and experience sections if they are flex/grid */
+  .achievements-section .content-wrapper,
+  .experience-section .content-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
   :root {
-    --fnt-size-base: 0.9rem;  /* Further reduce base font size */
-    --fnt-size-h1: 1.75rem;   /* Further reduce H1 size */
-    --fnt-size-h2: 1.5rem;    /* Further reduce H2 size */
-    --sz-spacing-md: 0.5rem;  /* Further reduce medium spacing */
+    --fnt-size-base: 0.9rem;
+    /* Further reduce base font size */
+    --fnt-size-h1: 1.75rem;
+    /* Further reduce H1 size */
+    --fnt-size-h2: 1.5rem;
+    /* Further reduce H2 size */
+    --sz-spacing-md: 0.5rem;
+    /* Further reduce medium spacing */
   }
 
   /* Example: Even less padding for very small screens */
@@ -60,17 +96,21 @@
   }
 
   .modal-content {
-    padding: 1rem; /* Reduce modal padding */
-    width: 95%; /* Wider modal on very small screens */
+    padding: 1rem;
+    /* Reduce modal padding */
+    width: 95%;
+    /* Wider modal on very small screens */
   }
 
   /* Adjust header background for mobile */
-  --color-header-bg: rgba(245, 238, 255, 1); /* Make header fully opaque on mobile if it overlays content */
+  --color-header-bg: rgba(245, 238, 255, 1);
+  /* Make header fully opaque on mobile if it overlays content */
 }
 
 /* Large desktops (if needed, adjust max-width for main container) */
 @media (min-width: 1200px) {
-  .container { /* Assuming a container class for max width */
+  .container {
+    /* Assuming a container class for max width */
     max-width: var(--sz-container-max-width);
     margin-left: auto;
     margin-right: auto;
@@ -136,6 +176,9 @@
   /* Semi-transparent header matching page background */
   --color-overlay: rgba(0, 0, 0, 0.5);
   /* Semi-transparent black for modal overlays */
+  --input-bg: #FFFFFF;
+  /* Input background for light theme */
+
 
   /* Border & Outline Colors */
   --color-border: #C3B1E1;
@@ -267,6 +310,8 @@
   /* Semi-transparent header matching dark bg */
   --color-overlay: rgba(0, 0, 0, 0.8);
   /* Darker Semi-transparent black for modal overlays */
+  --input-bg: #1A1A1A;
+  /* Input background for dark theme */
 
   /* Border & Outline Colors */
   --color-border: #444444;
@@ -493,15 +538,20 @@ p {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 0; /* Ensures it stays behind content */
-  background-color: transparent; /* Allows main body background to show if needed */
+  z-index: 0;
+  /* Ensures it stays behind content */
+  background-color: transparent;
+  /* Allows main body background to show if needed */
 }
 
 /* Decoration Circles (if you want these as part of the background) */
 .decoration-circle {
-  filter: blur(80px); /* Soft blur effect */
-  opacity: 0.6; /* Subtle visibility */
-  animation: pulse-fade 8s infinite alternate; /* Custom animation */
+  filter: blur(80px);
+  /* Soft blur effect */
+  opacity: 0.6;
+  /* Subtle visibility */
+  animation: pulse-fade 8s infinite alternate;
+  /* Custom animation */
 }
 
 @keyframes pulse-fade {
@@ -509,10 +559,12 @@ p {
     transform: scale(1);
     opacity: 0.6;
   }
+
   50% {
     transform: scale(1.05);
     opacity: 0.7;
   }
+
   100% {
     transform: scale(1);
     opacity: 0.6;
@@ -521,12 +573,15 @@ p {
 
 /* Add particle color variables to your theme roots (if not already there) */
 :root {
-  --color-particle: rgba(138, 43, 226, 0.1); /* Subtle purple for light theme */
+  --color-particle: rgba(138, 43, 226, 0.1);
+  /* Subtle purple for light theme */
 }
 
 [data-theme="dark-theme"] {
-  --color-particle: rgba(255, 215, 0, 0.15); /* Subtle Gold particles for dark theme */
+  --color-particle: rgba(255, 215, 0, 0.15);
+  /* Subtle Gold particles for dark theme */
 }
+
 .particles {
   position: absolute;
   top: 0;
@@ -542,19 +597,6 @@ p {
   position: absolute;
   background: var(--color-particle);
   border-radius: 50%;
-}
-
-/* Custom modal animation */
-@keyframes modalEntry {
-  0% {
-    opacity: 0;
-    transform: scale(0.95) translateY(10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
 }
 
 /* Ripple effect for buttons */
@@ -625,17 +667,24 @@ p {
   text-decoration: underline;
   color: var(--color-link-blue-hover) !important;
 }
+
 /* Custom rule to make 'View Certificates' buttons always blue */
-.view-cert-btn { /* Replace .view-cert-btn with the actual class of your certificate buttons */
-  background-color: #007bff !important; /* A standard blue */
-  color: #FFFFFF !important; /* White text for contrast */
-  border-color: #007bff !important; /* Ensure border is also blue if present */
+.view-cert-btn {
+  /* Replace .view-cert-btn with the actual class of your certificate buttons */
+  background-color: #007bff !important;
+  /* A standard blue */
+  color: #FFFFFF !important;
+  /* White text for contrast */
+  border-color: #007bff !important;
+  /* Ensure border is also blue if present */
 }
 
 /* If your certificates are links, ensure their text color is also blue */
-.view-cert-btn a { /* If the button is an 'a' tag or contains an 'a' tag */
+.view-cert-btn a {
+  /* If the button is an 'a' tag or contains an 'a' tag */
   color: #007bff !important;
 }
+
 /* Soft Skills proficiency bars */
 .skill-bar-fill {
   background-color: var(--color-primary);
@@ -667,41 +716,53 @@ p {
 }
 
 .button-contact-me:hover {
-  background-color: var(--color-secondary); /* Fill with secondary color on hover */
-  color: var(--color-text-dark); /* Change text to dark color on hover */
+  background-color: var(--color-secondary);
+  /* Fill with secondary color on hover */
+  color: var(--color-text-dark);
+  /* Change text to dark color on hover */
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 8px 15px var(--shadow-medium);
 }
 
 /* Base style for Download Resume button */
 .button-download-resume {
-  background-color: var(--color-secondary); /* Black in light theme, White in dark theme */
-  color: var(--color-text-dark); /* White text in light theme, Black text in dark theme */
-  border: 2px solid var(--color-secondary); /* Match border to background initially */
+  background-color: var(--color-secondary);
+  /* Black in light theme, White in dark theme */
+  color: var(--color-text-dark);
+  /* White text in light theme, Black text in dark theme */
+  border: 2px solid var(--color-secondary);
+  /* Match border to background initially */
   transition: all 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 /* Highlight for "Download Resume" (bordered button) */
 .button-download-resume:hover {
-  background-color: var(--color-secondary); /* Fill with secondary color on hover */
-  color: var(--color-text-dark); /* Change text to dark color on hover */
+  background-color: var(--color-secondary);
+  /* Fill with secondary color on hover */
+  color: var(--color-text-dark);
+  /* Change text to dark color on hover */
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 8px 15px var(--shadow-medium);
 }
 
 /* Base style for View Projects button */
 .button-view-projects {
-  border-color: var(--color-primary); /* Ensures border matches theme primary color */
-  color: var(--color-text); /* Use default text color for consistency with other text */
-  background-color: transparent; /* Ensure it's transparent initially */
+  border-color: var(--color-primary);
+  /* Ensures border matches theme primary color */
+  color: var(--color-text);
+  /* Use default text color for consistency with other text */
+  background-color: transparent;
+  /* Ensure it's transparent initially */
   transition: all 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 
 /* Highlight for "View Projects" (bordered button) */
 .button-view-projects:hover {
-  background-color: var(--color-primary); /* Fill with primary color on hover */
-  color: var(--color-text-dark); /* Change text to dark color on hover */
+  background-color: var(--color-primary);
+  /* Fill with primary color on hover */
+  color: var(--color-text-dark);
+  /* Change text to dark color on hover */
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 8px 15px var(--shadow-medium);
 }
@@ -826,6 +887,19 @@ p {
   /* This will be black in dark theme based on the existing variable definition */
 }
 
+/* Custom modal animation */
+@keyframes modalEntry {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 .modal-close-btn {
   position: absolute;
   top: 1rem;
@@ -841,264 +915,102 @@ p {
 .modal-close-btn:hover {
   color: var(--color-text);
 }
+
 /* Ensure span text is visible in light theme */
 html[data-theme="light-theme"] .bg-color-primary.text-color-text {
-  color: var(--color-secondary); /* Use black text on the primary (purple) background */
-}
-/* CSS for the Contact Section */
-
-/* Form Styles */
-label {
-    color: var(--color-text); /* Labels respect theme text color */
+  color: var(--color-secondary);
+  /* Use black text on the primary (purple) background */
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    background-color: var(--input-bg); /* Input background based on theme */
-    color: var(--color-text); /* Typed text color based on theme */
-    border: 1px solid var(--color-border); /* Border color based on theme */
-    padding: 10px;
-    border-radius: 0.375rem; /* Matches Tailwind's rounded-md */
-    width: 100%;
-    box-sizing: border-box; /* Include padding/border in total size */
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--color-primary); /* Highlight border on focus with primary color */
-    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2); /* Soft glow on focus */
-}
-
-/* Send Message Button Styling */
-.send-message-btn {
-  background-color: var(--color-primary); /* Purple in light, Yellow in dark */
-  color: #ffffff; /* White text for contrast in light theme */
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-}
-
-.send-message-btn:hover {
-    transform: scale(1.05);
-}
-
-/* Send Message Button in Dark Theme */
-[data-theme="dark-theme"] .send-message-btn {
-    color: var(--color-text-dark); /* Dark text for contrast on yellow background */
-}
-
-/* Modal Styles (assuming these are used for contact form success/error messages) */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-overlay);
+/* Consolidated Form Styles */
+form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.modal-overlay.visible {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.modal-content {
+  flex-direction: column;
+  gap: 1rem;
+  /* Space between form fields */
+  max-width: 500px;
+  /* Limit form width */
+  margin: 0 auto;
+  /* Center the form */
+  padding: 1.5rem;
   background-color: var(--color-card-bg);
-  padding: 2rem;
+  /* Use card background for the form area */
   border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  position: relative;
-  max-width: 800px;
-  width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
-  transform: scale(0.95) translateY(10px);
-  animation: modalEntry 0.3s ease-out forwards;
   border: 1px solid var(--color-border);
 }
 
-/* Ensure modal text is black in dark theme */
-[data-theme="dark-theme"] .modal-content #modalBody {
-  color: var(--color-text-dark); /* This will be black for clear visibility */
-}
-
-/* Modal animation */
-@keyframes modalEntry {
-  to {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
+label {
+  display: flex;
+  /* Make labels and inputs align nicely */
+  flex-direction: column;
+  gap: 0.5rem;
+  /* Space between label text and input field */
   color: var(--color-text);
-  transition: color 0.3s ease;
+  /* Labels respect theme text color */
 }
 
-.modal-close-btn:hover {
-  color: var(--color-primary);
-}
-/* CSS for the provided form HTML snippet */
-
-/* Basic form layout adjustments (optional, depends on surrounding HTML) */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* Space between form fields */
-    max-width: 500px; /* Limit form width */
-    margin: 0 auto; /* Center the form */
-    padding: 1.5rem;
-    background-color: var(--color-card-bg); /* Use card background for the form area */
-    border-radius: 0.75rem;
-    border: 1px solid var(--color-border);
-}
-
-/* Styles for labels */
-label {
-    display: flex; /* Make labels and inputs align nicely */
-    flex-direction: column;
-    gap: 0.5rem; /* Space between label text and input field */
-    color: var(--color-text); /* Labels respect theme text color */
-}
-
-/* Styles for email input and textarea */
-input[type="email"],
-textarea {
-    background-color: var(--input-bg); /* Input background based on theme */
-    color: var(--color-text); /* Typed text color based on theme */
-    border: 1px solid var(--color-border); /* Border color based on theme */
-    padding: 10px;
-    border-radius: 0.375rem; /* Matches Tailwind's rounded-md */
-    width: 100%;
-    box-sizing: border-box; /* Include padding/border in total size */
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}
-
-input[type="email"]:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--color-primary); /* Highlight border on focus with primary color */
-    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2); /* Soft glow on focus */
-}
-
-/* Style for the submit button */
-button[type="submit"] {
-  background-color: var(--color-primary); /* Purple in light, Yellow in dark */
-  color: #ffffff; /* White text for contrast in light theme */
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600; /* Semibold */
-  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-  align-self: flex-start; /* Align button to the start of the form */
-}
-
-button[type="submit"]:hover {
-    transform: scale(1.05);
-}
-
-/* Submit button in Dark Theme */
-[data-theme="dark-theme"] button[type="submit"] {
-    color: var(--color-text-dark); /* Dark text for contrast on yellow background */
-}
-
-/* Ensure textarea resizes vertically */
-textarea {
-    resize: vertical;
-    min-height: 100px; /* Minimum height for textarea */
-}/* CSS for the updated form HTML snippet */
-
-/* Basic form layout adjustments (optional, depends on surrounding HTML) */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* Space between form fields */
-    max-width: 500px; /* Limit form width */
-    margin: 0 auto; /* Center the form */
-    padding: 1.5rem;
-    background-color: var(--color-card-bg); /* Use card background for the form area */
-    border-radius: 0.75rem;
-    border: 1px solid var(--color-border);
-}
-
-/* Styles for labels */
-label {
-    display: flex; /* Make labels and inputs align nicely */
-    flex-direction: column;
-    gap: 0.5rem; /* Space between label text and input field */
-    color: var(--color-text); /* Labels respect theme text color */
-}
-
-/* Styles for all text-based inputs and textarea */
 input[type="text"],
 input[type="email"],
-input[type="tel"], /* Added for mobile number input */
+input[type="tel"],
+/* Added for mobile number input */
 textarea {
-    background-color: var(--input-bg); /* Input background based on theme */
-    color: var(--color-text); /* Typed text color based on theme */
-    border: 1px solid var(--color-border); /* Border color based on theme */
-    padding: 10px;
-    border-radius: 0.375rem; /* Matches Tailwind's rounded-md */
-    width: 100%;
-    box-sizing: border-box; /* Include padding/border in total size */
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  background-color: var(--input-bg);
+  /* Input background based on theme */
+  color: var(--color-text);
+  /* Typed text color based on theme */
+  border: 1px solid var(--color-border);
+  /* Border color based on theme */
+  padding: 10px;
+  border-radius: 0.375rem;
+  /* Matches Tailwind's rounded-md */
+  width: 100%;
+  box-sizing: border-box;
+  /* Include padding/border in total size */
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
-/* Focus styles for all text-based inputs and textarea */
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="tel"]:focus, /* Added for mobile number input */
+input[type="tel"]:focus,
+/* Added for mobile number input */
 textarea:focus {
-    outline: none;
-    border-color: var(--color-primary); /* Highlight border on focus with primary color */
-    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2); /* Soft glow on focus */
+  outline: none;
+  border-color: var(--color-primary);
+  /* Highlight border on focus with primary color */
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2);
+  /* Soft glow on focus */
 }
 
-/* Style for the submit button */
-button[type="submit"] {
-  background-color: var(--color-primary); /* Purple in light, Yellow in dark */
-  color: #ffffff; /* White text for contrast in light theme */
+button[type="submit"],
+.send-message-btn {
+  background-color: var(--color-primary);
+  /* Purple in light, Yellow in dark */
+  color: #ffffff;
+  /* White text for contrast in light theme */
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  font-weight: 600; /* Semibold */
+  font-weight: 600;
+  /* Semibold */
   transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-  align-self: flex-start; /* Align button to the start of the form */
+  align-self: flex-start;
+  /* Align button to the start of the form */
 }
 
-button[type="submit"]:hover {
-    transform: scale(1.05);
+button[type="submit"]:hover,
+.send-message-btn:hover {
+  transform: scale(1.05);
 }
 
-/* Submit button in Dark Theme */
-[data-theme="dark-theme"] button[type="submit"] {
-    color: var(--color-text-dark); /* Dark text for contrast on yellow background */
+[data-theme="dark-theme"] button[type="submit"],
+[data-theme="dark-theme"] .send-message-btn {
+  color: var(--color-text-dark);
+  /* Dark text for contrast on yellow background */
 }
 
-/* Ensure textarea resizes vertically */
 textarea {
-    resize: vertical;
-    min-height: 100px; /* Minimum height for textarea */
+  resize: vertical;
+  min-height: 100px;
+  /* Minimum height for textarea */
 }
